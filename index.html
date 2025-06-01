@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto de Ciencia: El Surrealismo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #6200ea;
+      --secondary-color: #03dac6;
+      --accent-color: #ff4081;
+      --text-color: #333;
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --header-gradient-1: #5e35b1;
+      --header-gradient-2: #311b92;
+      --footer-gradient-1: #311b92;
+      --footer-gradient-2: #4527a0;
+      --shadow-color: rgba(0,0,0,0.1);
+      --border-radius: 12px;
+      --transition-speed: 0.3s;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+      position: relative;
+      overflow: hidden;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+      opacity: 0.8;
+    }
+    
+    .header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .header-title-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+    
+    .header-icon {
+      font-size: 4rem;
+      margin-right: 20px;
+      animation: pulse 3s infinite alternate;
+      text-shadow: 0 0 15px rgba(255,255,255,0.7);
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(1.1); opacity: 1; }
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 4.5em;
+      font-weight: 700;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.3);
+      background: linear-gradient(to right, #ffffff, #c9d6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+    }
+    
+    .header-subtitle {
+      font-size: 1.6em;
+      margin: 15px 0 30px;
+      opacity: 0.9;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 300;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+    
+    .header-decoration {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .floating-element {
+      position: absolute;
+      font-size: var(--size);
+      top: var(--top);
+      left: var(--left);
+      animation: float 8s ease-in-out infinite;
+      animation-delay: var(--delay);
+      opacity: 0.8;
+      filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+      100% { transform: translateY(0) rotate(0deg); }
+    }
+    
+    @media (max-width: 768px) {
+      header {
+        padding: 60px 15px;
+        min-height: 350px;
+      }
+      
+      .header-title-container {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .header-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      
+      header h1 {
+        font-size: 3em;
+        text-align: center;
+      }
+      
+      .header-subtitle {
+        font-size: 1.2em;
+      }
+      
+      .floating-element {
+        font-size: calc(var(--size) * 0.7);
+      }
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    section::after {
+      content: '';
+      display: block;
+      height: 50px;
+      background-image: radial-gradient(circle, var(--shadow-color) 0%, transparent 70%);
+      margin: 0 auto;
+      margin-top: 40px;
+      opacity: 0.3;
+      width: 80%;
+    }
+    h2 {
+      color: var(--primary-color);
+      font-size: 2.2em;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+      font-weight: 600;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      border-radius: 2px;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 20px 0;
+    }
+    
+    .galeria-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      transition: all var(--transition-speed) ease;
+    }
+    
+    .galeria-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .galeria-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .galeria-item .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+      color: white;
+      padding: 20px;
+      transform: translateY(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .galeria-item:hover .overlay {
+      transform: translateY(-5px);
+    }
+    
+    .galeria-item h3 {
+      margin: 0 0 5px 0;
+      font-size: 1.2em;
+    }
+    
+    .galeria-item p {
+      margin: 0;
+      font-size: 0.9em;
+      opacity: 0.9;
+    }
+    .materiales-lista {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 0;
+      list-style-type: none;
+    }
+    
+    .material-item {
+      display: flex;
+      align-items: flex-start;
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 10px 30px var(--shadow-color);
+      transition: all var(--transition-speed) ease;
+      border-left: 5px solid var(--accent-color);
+    }
+    
+    .material-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+    
+    .material-icon {
+      font-size: 2.5em;
+      margin-right: 20px;
+      color: var(--accent-color);
+      background: rgba(255, 64, 129, 0.1);
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+    
+    .material-info {
+      flex: 1;
+    }
+    
+    .material-info h4 {
+      margin: 0 0 10px;
+      color: var(--primary-color);
+      font-size: 1.3em;
+      font-weight: 600;
+    }
+    
+    .material-info p {
+      margin: 0;
+      font-size: 0.95em;
+      color: #666;
+      line-height: 1.5;
+    }
+    
+    .material-tag {
+      display: inline-block;
+      background: rgba(3, 218, 198, 0.1);
+      color: var(--secondary-color);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.8em;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+    .perfil {
+      background: var(--card-bg);
+      padding: 30px;
+      margin: 30px 0;
+      border-radius: var(--border-radius);
+      box-shadow: 0 10px 30px var(--shadow-color);
+      transition: all var(--transition-speed) ease;
+      display: flex;
+      align-items: flex-start;
+      gap: 25px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .perfil::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    }
+    
+    .perfil:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+    
+    .perfil-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 5px 15px var(--shadow-color);
+    }
+    
+    .perfil-contenido {
+      flex: 1;
+    }
+    
+    .perfil-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .perfil-header h3 {
+      color: var(--primary-color);
+      margin: 0;
+      font-size: 1.6em;
+      font-weight: 600;
+    }
+    
+    .verificado {
+      width: 24px;
+      height: 24px;
+      filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+    }
+    
+    .perfil p {
+      margin: 15px 0;
+      line-height: 1.6;
+      position: relative;
+      padding-left: 5px;
+    }
+    
+    .perfil p:before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 0;
+      height: 100%;
+      width: 3px;
+      background-color: var(--secondary-color);
+      opacity: 0.5;
+      border-radius: 3px;
+    }
+    
+    .perfil strong {
+      color: var(--primary-color);
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+    footer {
+      background: linear-gradient(135deg, var(--footer-gradient-1), var(--footer-gradient-2));
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+      box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    footer p {
+      margin: 0;
+      font-size: 1.1em;
+      opacity: 0.9;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .social-links a {
+      color: white;
+      font-size: 1.5em;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      transform: translateY(-5px);
+      color: var(--secondary-color);
+    }
+    @media (max-width: 768px) {
+      section {
+        padding: 20px 15px;
+      }
+      .perfil {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+      }
+      .perfil-img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+      }
+      .perfil-header {
+        justify-content: center;
+      }
+      .material-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .material-icon {
+        margin: 0 0 10px 0;
+      }
+      .galeria img {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+<header>
+  <div class="header-content">
+    <div class="header-title-container">
+      <div class="header-icon">🎭</div>
+      <h1>El Universo Surrealista</h1>
+    </div>
+    <p class="header-subtitle">Un viaje a través de la mente, los sueños y las realidades alternativas</p>
+    <div class="header-decoration">
+      <div class="floating-element" style="--delay: 0s; --size: 60px; --top: 20%; --left: 10%;">🦋</div>
+      <div class="floating-element" style="--delay: 2s; --size: 50px; --top: 70%; --left: 85%;">⏱️</div>
+      <div class="floating-element" style="--delay: 4s; --size: 45px; --top: 30%; --left: 80%;">👁️</div>
+      <div class="floating-element" style="--delay: 6s; --size: 55px; --top: 60%; --left: 20%;">🔮</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <h2>¿Qué es el Surrealismo?</h2>
+  <p>
+    El surrealismo es un movimiento artístico y literario del siglo XX que busca liberar la imaginación y representar lo irracional,
+    los sueños y el subconsciente. Fue fundado por André Breton y tiene como grandes representantes a Salvador Dalí y René Magritte.
+  </p>
+</section>
+
+<section>
+  <h2>Historia del Surrealismo</h2>
+  <div class="section-intro">
+    <p>El surrealismo surgió como un movimiento revolucionario que transformó el arte y la literatura del siglo XX. Conozcamos su fascinante evolución a través del tiempo.</p>
+  </div>
+  <div class="timeline-container">
+    <div class="timeline-item">
+      <div class="timeline-date">1916-1920</div>
+      <div class="timeline-content">
+        <h3>Orígenes y Dadaísmo</h3>
+        <p>El surrealismo tiene sus raíces en el movimiento Dadá, surgido durante la Primera Guerra Mundial como una reacción contra los valores tradicionales y la racionalidad que había llevado a Europa a la guerra. El Cabaret Voltaire en Zúrich fue un centro importante para estos primeros experimentos.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">1924</div>
+      <div class="timeline-content">
+        <h3>Primer Manifiesto Surrealista</h3>
+        <p>André Breton publica el Primer Manifiesto Surrealista, documento fundacional que define el surrealismo como "automatismo psíquico puro por el cual se propone expresar el funcionamiento real del pensamiento". Este manifiesto establece las bases teóricas del movimiento.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">1925-1938</div>
+      <div class="timeline-content">
+        <h3>Época Dorada</h3>
+        <p>Durante este período, el surrealismo alcanza su máximo esplendor con artistas como Salvador Dalí, René Magritte, Max Ernst y Joan Miró. Se desarrollan técnicas como el frottage, la decalcomanía y el cadáver exquisito. La Exposición Internacional del Surrealismo de 1938 en París marca un hito importante.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">1939-1945</div>
+      <div class="timeline-content">
+        <h3>Exilio y Segunda Guerra Mundial</h3>
+        <p>Con el estallido de la Segunda Guerra Mundial, muchos surrealistas se exilian a Estados Unidos, especialmente a Nueva York, expandiendo la influencia del movimiento. Breton organiza exposiciones en la Galería Peggy Guggenheim.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">1946-1966</div>
+      <div class="timeline-content">
+        <h3>Posguerra y Evolución</h3>
+        <p>Tras la guerra, el surrealismo continúa evolucionando e influenciando otros movimientos como el expresionismo abstracto. La muerte de André Breton en 1966 marca simbólicamente el fin de la era clásica del surrealismo.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Actualidad</div>
+      <div class="timeline-content">
+        <h3>Legado Contemporáneo</h3>
+        <p>El surrealismo sigue influyendo en el arte contemporáneo, el cine, la publicidad y la cultura popular. Sus técnicas y filosofía continúan inspirando a nuevas generaciones de artistas que exploran el subconsciente y cuestionan la realidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Galería Surrealista</h2>
+  <div class="galeria">
+    <div class="galeria-item">
+      <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/The_Persistence_of_Memory.jpg" alt="La persistencia de la memoria - Dalí">
+      <div class="overlay">
+        <h3>La persistencia de la memoria</h3>
+        <p>Salvador Dalí, 1931</p>
+      </div>
+    </div>
+    <div class="galeria-item">
+      <img src="https://media.discordapp.net/attachments/1356038487861755965/1378168756886569101/61BQyw-40qL._AC_UF8941000_QL80_.jpg?ex=683b9f2c&is=683a4dac&hm=0ca420042d17d8698402b4e855d23c9abacc198980bee6162e0092b1855a0640&=&format=webp&width=705&height=939" alt="El hijo del hombre - Magritte">
+      <div class="overlay">
+        <h3>El hijo del hombre</h3>
+        <p>René Magritte, 1964</p>
+      </div>
+    </div>
+    <div class="galeria-item">
+      <img src="https://media.discordapp.net/attachments/1366597163014033488/1378753462346449018/images.jpeg?ex=683dbfb9&is=683c6e39&hm=26f0e2dd30eb2d63acb90fdbeb7f3d4c045f979b5a184afa2836253869738b4a&=&format=webp" alt="Los elefantes - Dalí">
+      <div class="overlay">
+        <h3>Los elefantes</h3>
+        <p>Salvador Dalí, 1948</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Materiales y Proceso de Prototipado</h2>
+  <div class="section-intro">
+    <p>Durante el desarrollo de nuestro proyecto, experimentamos con varios prototipos y materiales. A continuación detallamos los materiales utilizados, cómo los aprovechamos y los desafíos que enfrentamos en el proceso.</p>
+  </div>
+    <ul class="materiales-lista">
+      <li class="material-item">
+        <span class="material-icon">♻️</span>
+        <div class="material-info">
+          <h4>Cartulina Reciclada</h4>
+          <p>Utilizamos 5 cartulinas negras para los primeros prototipos. Desperdiciamos aproximadamente 30% del material en pruebas fallidas antes de lograr el diseño final.</p>
+          <span class="material-tag">Prototipo v1</span>
+        </div>
+      </li>
+      <li class="material-item">
+        <span class="material-icon">🖼️</span>
+        <div class="material-info">
+          <h4>Impresiones y Pruebas</h4>
+          <p>Realizamos 15 impresiones de prueba antes de conseguir el resultado deseado. Las impresiones fallidas fueron reutilizadas como bocetos para nuevas ideas.</p>
+          <span class="material-tag">Iteración</span>
+        </div>
+      </li>
+      <li class="material-item">
+        <span class="material-icon">🌱</span>
+        <div class="material-info">
+          <h4>Adhesivos y Uniones</h4>
+          <p>Probamos 3 tipos diferentes de pegamentos antes de encontrar el adecuado. Los primeros intentos resultaron en uniones débiles que tuvimos que rehacer.</p>
+          <span class="material-tag">Prototipo v2</span>
+        </div>
+      </li>
+      <li class="material-item">
+        <span class="material-icon">🎨</span>
+        <div class="material-info">
+          <h4>Técnicas de Coloración</h4>
+          <p>Experimentamos con diferentes técnicas de coloreado. Desperdiciamos varios marcadores al probar efectos que no funcionaron como esperábamos.</p>
+          <span class="material-tag">Experimentación</span>
+        </div>
+      </li>
+      <li class="material-item">
+        <span class="material-icon">📏</span>
+        <div class="material-info">
+          <h4>Mediciones y Recortes</h4>
+          <p>Realizamos múltiples mediciones incorrectas que resultaron en recortes desperdiciados. Aprendimos a medir dos veces antes de cortar.</p>
+          <span class="material-tag">Aprendizaje</span>
+        </div>
+      </li>
+      <li class="material-item">
+        <span class="material-icon">🔄</span>
+        <div class="material-info">
+          <h4>Reutilización Creativa</h4>
+          <p>Convertimos los materiales desperdiciados en elementos decorativos adicionales, aprovechando los errores para crear efectos visuales únicos.</p>
+          <span class="material-tag">Innovación</span>
+        </div>
+      </li>
+    </ul>
+</section>
+
+<section>
+  <h2>Preguntas De Equipo</h2>
+
+  <div class="perfil">
+    <img src="https://media.discordapp.net/attachments/1356038487861755965/1378243367388839967/IMG_3192.png?ex=683be4a9&is=683a9329&hm=4db9479af0f0fe1f4d4c51e0c2e79e34a4b33f9cca017b29e0fd96714995c3fd&=&format=webp&quality=lossless&width=745&height=683" alt="Alex" class="perfil-img">
+    <div class="perfil-contenido">
+      <div class="perfil-header">
+        <h3>Alex</h3>
+        <img src="https://cdn-icons-png.flaticon.com/512/7641/7641727.png" alt="Verificado" class="verificado">
+      </div>
+      <p><strong>¿Qué opinas del surrealismo?</strong> Me parece una forma increíble de expresar cosas que no se pueden explicar con lógica.</p>
+      <p><strong>¿Quién es tu artista surrealista favorito?</strong> Salvador Dalí, por sus ideas locas y originales.</p>
+    </div>
+  </div>
+
+  <div class="perfil">
+    <img src="https://media.discordapp.net/attachments/1356038487861755965/1378243367388839967/IMG_3192.png?ex=683be4a9&is=683a9329&hm=4db9479af0f0fe1f4d4c51e0c2e79e34a4b33f9cca017b29e0fd96714995c3fd&=&format=webp&quality=lossless&width=745&height=683" alt="Toño" class="perfil-img">
+    <div class="perfil-contenido">
+      <div class="perfil-header">
+        <h3>Toño</h3>
+        <img src="https://cdn-icons-png.flaticon.com/512/7641/7641727.png" alt="Verificado" class="verificado">
+      </div>
+      <p><strong>¿Qué te inspiró del surrealismo?</strong> La libertad de expresión y la capacidad de crear mundos imposibles que desafían la lógica.</p>
+      <p><strong>¿Cómo aplicarías el surrealismo en tu vida diaria?</strong> Intentando ver más allá de lo obvio y encontrando conexiones inesperadas entre las cosas cotidianas.</p>
+    </div>
+  </div>
+
+  <div class="perfil">
+    <img src="https://media.discordapp.net/attachments/1366597163014033488/1378751362610892934/a980a953d46ba386.jpeg?ex=683dbdc4&is=683c6c44&hm=3ae4894ed2fc0967d21aa4a719ffbfff4d955a1e5aa49a8168691bf573881aa1&=&format=webp" alt="Axel" class="perfil-img">
+    <div class="perfil-contenido">
+      <div class="perfil-header">
+        <h3>Axel</h3>
+        <img src="https://cdn-icons-png.flaticon.com/512/7641/7641727.png" alt="Verificado" class="verificado">
+      </div>
+      <p><strong>¿Qué elemento del surrealismo te parece más fascinante?</strong> La forma en que mezcla lo onírico con la realidad, creando imágenes que parecen sacadas directamente de un sueño.</p>
+      <p><strong>¿Qué técnica surrealista te gustaría probar?</strong> El automatismo psíquico, para ver qué surge cuando dejas fluir libremente tus pensamientos sin censura.</p>
+    </div>
+  </div>
+
+  <div class="perfil">
+    <img src="https://media.discordapp.net/attachments/1356038487861755965/1378015081756885002/okarun_icon_edit.jpeg?ex=683b100d&is=6839be8d&hm=d7b5a41b38bfb49ea2ee553111f5dc60a1e7df0d8232c5ccebdd4109964583e1&=&format=webp&width=828&height=828" alt="Osiel" class="perfil-img">
+    <div class="perfil-contenido">
+      <div class="perfil-header">
+        <h3>Osiel</h3>
+        <img src="https://cdn-icons-png.flaticon.com/512/7641/7641727.png" alt="Verificado" class="verificado">
+      </div>
+      <p><strong>¿Qué aprendiste con este proyecto?</strong> Aprendí que el arte puede expresar el subconsciente y los sueños de una manera muy visual.</p>
+      <p><strong>¿Qué obra surrealista te gustó más?</strong> "El hijo del hombre" de René Magritte.</p>
+    </div>
+  </div>
+
+  <div class="perfil">
+    <img src="https://media.discordapp.net/attachments/1356038487861755965/1377855207916048524/jpeg.jpeg?ex=683b23e8&is=6839d268&hm=8adf790e59f79f38c31f550e232dee2706f61019c913a08b9244ee0263512198&=&format=webp&width=828&height=791" alt="Cristopher" class="perfil-img">
+    <div class="perfil-contenido">
+      <div class="perfil-header">
+        <h3>Cristopher</h3>
+        <img src="https://cdn-icons-png.flaticon.com/512/7641/7641727.png" alt="Verificado" class="verificado">
+      </div>
+      <p><strong>¿Por qué crees que el surrealismo es importante?</strong> Porque muestra otra forma de ver la realidad, más libre y creativa.</p>
+      <p><strong>¿Qué fue lo que más te gustó del proyecto?</strong> Poder explorar imágenes raras y diferentes que no se ven todos los días.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Pon a prueba tus conocimientos surrealistas</h2>
+  <div class="section-intro">
+    <p>¿Cuánto sabes sobre el movimiento surrealista? Responde estas preguntas y descubre si eres un verdadero conocedor del mundo de los sueños y el subconsciente.</p>
+  </div>
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <div class="quiz-icon">🎭</div>
+      <h3>Quiz Surrealista</h3>
+    </div>
+    <div id="quiz">
+      <div class="question-container">
+        <div class="question-number" id="question-number">Pregunta 1/6</div>
+        <p class="question-text" id="question"></p>
+        <div class="options-container" id="options"></div>
+      </div>
+      <div class="quiz-controls">
+        <button id="submit-quiz">Responder</button>
+        <div class="quiz-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+      </div>
+      <p id="quiz-result"></p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const quizData = [
+    {
+      question: "¿Quién es considerado uno de los máximos exponentes del surrealismo, famoso por sus relojes derretidos?",
+      options: ["Pablo Picasso", "Salvador Dalí", "Vincent van Gogh", "Claude Monet"],
+      answer: "Salvador Dalí",
+      explanation: "Salvador Dalí es conocido por obras como 'La persistencia de la memoria' con sus icónicos relojes blandos."
+    },
+    {
+      question: "¿Qué obra de René Magritte muestra una pipa con la frase 'Esto no es una pipa'?",
+      options: ["El hijo del hombre", "La traición de las imágenes", "Golconda", "El imperio de las luces"],
+      answer: "La traición de las imágenes",
+      explanation: "'La traición de las imágenes' (1929) contiene la famosa frase 'Ceci n'est pas une pipe' (Esto no es una pipa)."
+    },
+    {
+      question: "¿Cuál de los siguientes conceptos es central en el surrealismo?",
+      options: ["La razón", "El subconsciente", "La simetría", "La realidad objetiva"],
+      answer: "El subconsciente",
+      explanation: "El surrealismo explora el mundo del subconsciente, los sueños y las asociaciones irracionales."
+    },
+    {
+      question: "¿En qué año se publicó el Primer Manifiesto Surrealista por André Breton?",
+      options: ["1914", "1924", "1939", "1945"],
+      answer: "1924",
+      explanation: "André Breton publicó el Primer Manifiesto Surrealista en 1924, estableciendo las bases teóricas del movimiento."
+    },
+    {
+      question: "¿Qué técnica surrealista consiste en crear imágenes a partir de manchas aleatorias?",
+      options: ["Collage", "Frottage", "Decalcomanía", "Grattage"],
+      answer: "Decalcomanía",
+      explanation: "La decalcomanía es una técnica donde se presiona pintura entre superficies para crear formas aleatorias que estimulan la imaginación."
+    },
+    {
+      question: "¿Qué artista surrealista es conocida por sus pinturas de temas autobiográficos y autorretratos?",
+      options: ["Frida Kahlo", "Georgia O'Keeffe", "Louise Bourgeois", "Tamara de Lempicka"],
+      answer: "Frida Kahlo",
+      explanation: "Aunque no se identificaba formalmente como surrealista, Frida Kahlo creó obras con elementos oníricos y simbólicos que la asocian al movimiento."
+    },
+    {
+      question: "¿Qué película de Luis Buñuel y Salvador Dalí es considerada una obra maestra del cine surrealista?",
+      options: ["Metrópolis", "Un perro andaluz", "El gabinete del Dr. Caligari", "Nosferatu"],
+      answer: "Un perro andaluz",
+      explanation: "'Un perro andaluz' (1929) es una película surrealista dirigida por Luis Buñuel en colaboración con Salvador Dalí, famosa por sus imágenes oníricas y desconcertantes."
+    },
+    {
+      question: "¿Qué poeta surrealista escribió 'Nadja', una novela experimental que mezcla realidad y ficción?",
+      options: ["Paul Éluard", "André Breton", "Louis Aragon", "Guillaume Apollinaire"],
+      answer: "André Breton",
+      explanation: "André Breton, fundador del movimiento surrealista, escribió 'Nadja' en 1928, una obra que explora el azar, el amor y lo maravilloso."
+    },
+    {
+      question: "¿Qué técnica utilizaban los surrealistas para acceder al subconsciente?",
+      options: ["Escritura automática", "Meditación trascendental", "Hipnosis clínica", "Análisis matemático"],
+      answer: "Escritura automática",
+      explanation: "La escritura automática era una técnica donde se escribía rápidamente sin censura consciente, permitiendo que emergieran contenidos del subconsciente."
+    },
+    {
+      question: "¿Qué famosa obra de Salvador Dalí muestra elefantes con patas largas y delgadas?",
+      options: ["La persistencia de la memoria", "Los elefantes", "El gran masturbador", "Sueño causado por el vuelo de una abeja"],
+      answer: "Los elefantes",
+      explanation: "'Los elefantes' (1948) presenta elefantes con patas extremadamente largas y delgadas, simbolizando la fragilidad y distorsión de la realidad."
+    },
+    {
+      question: "¿Qué artista surrealista es conocida por sus esculturas de arañas gigantes?",
+      options: ["Leonora Carrington", "Remedios Varo", "Louise Bourgeois", "Meret Oppenheim"],
+      answer: "Louise Bourgeois",
+      explanation: "Louise Bourgeois creó la serie 'Maman', enormes esculturas de arañas que representan a la madre protectora pero también amenazante."
+    },
+    {
+      question: "¿Qué objeto cotidiano transformó Marcel Duchamp en una obra surrealista al firmarlo con el seudónimo 'R. Mutt'?",
+      options: ["Una pipa", "Un urinario", "Una bicicleta", "Un sombrero"],
+      answer: "Un urinario",
+      explanation: "Marcel Duchamp presentó 'Fuente' (1917), un urinario firmado como 'R. Mutt', desafiando las convenciones artísticas y anticipando el surrealismo."
+    },
+    {
+      question: "¿Qué artista surrealista mexicana es conocida por sus pinturas de animales y elementos de la naturaleza con significados simbólicos?",
+      options: ["Frida Kahlo", "Remedios Varo", "Leonora Carrington", "María Izquierdo"],
+      answer: "Leonora Carrington",
+      explanation: "Leonora Carrington, artista británico-mexicana, creó un universo mágico poblado de criaturas fantásticas y símbolos alquímicos."
+    },
+    {
+      question: "¿Qué objeto creó Meret Oppenheim cubriendo una taza, platillo y cuchara con piel de animal?",
+      options: ["Teléfono Langosta", "Objeto (Desayuno en piel)", "El regalo", "La Venus restaurada"],
+      answer: "Objeto (Desayuno en piel)",
+      explanation: "'Objeto' (1936), también conocido como 'Desayuno en piel', es una obra icónica que genera una sensación de incomodidad al transformar objetos cotidianos."
+    },
+    {
+      question: "¿Qué movimiento artístico precedió al surrealismo y tuvo gran influencia en su desarrollo?",
+      options: ["Cubismo", "Impresionismo", "Dadaísmo", "Expresionismo"],
+      answer: "Dadaísmo",
+      explanation: "El Dadaísmo, con su rechazo a la lógica y su espíritu antiarte, sentó las bases para el desarrollo posterior del surrealismo."
+    }
+  ];
+
+  // Función para mezclar el array de preguntas (algoritmo Fisher-Yates)
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  // Número de preguntas a mostrar en cada quiz
+  const questionsPerQuiz = 8;
+  
+  // Mezclar las preguntas y seleccionar un subconjunto
+  let selectedQuizData = [];
+  
+  function selectRandomQuestions() {
+    const shuffledQuestions = shuffleArray([...quizData]);
+    selectedQuizData = shuffledQuestions.slice(0, questionsPerQuiz);
+  }
+  
+  // Seleccionar preguntas aleatorias al inicio
+  selectRandomQuestions();
+
+  let currentQuestionIndex = 0;
+  let score = 0;
+  const questionElement = document.getElementById('question');
+  const questionNumberElement = document.getElementById('question-number');
+  const optionsElement = document.getElementById('options');
+  const submitButton = document.getElementById('submit-quiz');
+  const resultElement = document.getElementById('quiz-result');
+  const progressFill = document.getElementById('progress-fill');
+
+  function updateProgress() {
+    const progressPercentage = ((currentQuestionIndex + 1) / selectedQuizData.length) * 100;
+    progressFill.style.width = `${progressPercentage}%`;
+    questionNumberElement.textContent = `Pregunta ${currentQuestionIndex + 1}/${selectedQuizData.length}`;
+  }
+
+  function loadQuestion() {
+    const currentQuiz = selectedQuizData[currentQuestionIndex];
+    questionElement.textContent = currentQuiz.question;
+    optionsElement.innerHTML = '';
+    updateProgress();
+    
+    currentQuiz.options.forEach(option => {
+      const button = document.createElement('button');
+      button.textContent = option;
+      button.classList.add('option-button');
+      button.addEventListener('click', () => selectOption(option));
+      optionsElement.appendChild(button);
+    });
+    resultElement.textContent = '';
+  }
+
+  let selectedAnswer = null;
+
+  function selectOption(option) {
+    selectedAnswer = option;
+    const buttons = optionsElement.querySelectorAll('.option-button');
+    buttons.forEach(button => {
+      button.classList.remove('selected');
+      if (button.textContent === option) {
+        button.classList.add('selected');
+      }
+    });
+  }
+
+  function checkAnswer() {
+    if (selectedAnswer) {
+      const currentQuiz = selectedQuizData[currentQuestionIndex];
+      const isCorrect = selectedAnswer === currentQuiz.answer;
+      
+      if (isCorrect) {
+        score++;
+        resultElement.innerHTML = `<span class="correct-answer">¡Correcto! 🎉</span><br><span class="explanation">${currentQuiz.explanation}</span>`;
+      } else {
+        resultElement.innerHTML = `<span class="wrong-answer">Incorrecto. La respuesta correcta es: ${currentQuiz.answer} 😔</span><br><span class="explanation">${currentQuiz.explanation}</span>`;
+      }
+      
+      // Disable buttons after answering
+      const buttons = optionsElement.querySelectorAll('.option-button');
+      buttons.forEach(button => {
+        button.disabled = true;
+        if (button.textContent === currentQuiz.answer) {
+          button.classList.add('correct');
+        } else if (button.textContent === selectedAnswer && !isCorrect) {
+          button.classList.add('wrong');
+        }
+      });
+      
+      submitButton.textContent = 'Siguiente Pregunta';
+      submitButton.removeEventListener('click', checkAnswer);
+      submitButton.addEventListener('click', nextQuestion);
+    } else {
+      resultElement.textContent = 'Por favor, selecciona una opción.';
+      resultElement.style.color = 'orange';
+    }
+  }
+
+  function nextQuestion() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < selectedQuizData.length) {
+      selectedAnswer = null;
+      loadQuestion();
+      submitButton.textContent = 'Responder';
+      submitButton.removeEventListener('click', nextQuestion);
+      submitButton.addEventListener('click', checkAnswer);
+    } else {
+      showFinalResults();
+    }
+  }
+
+  function showFinalResults() {
+    const percentage = Math.round((score / selectedQuizData.length) * 100);
+    let message;
+    
+    if (percentage >= 80) {
+      message = '¡Excelente! Eres un verdadero conocedor del surrealismo.';
+    } else if (percentage >= 50) {
+      message = '¡Buen trabajo! Tienes conocimientos sólidos sobre el surrealismo.';
+    } else {
+      message = 'Sigue aprendiendo sobre el fascinante mundo del surrealismo.';
+    }
+    
+    questionElement.textContent = '¡Quiz Completado!';
+    optionsElement.innerHTML = `
+      <div class="final-results">
+        <div class="score-display">
+          <div class="score-circle">
+            <span class="score-number">${score}/${selectedQuizData.length}</span>
+          </div>
+          <p class="score-percentage">${percentage}%</p>
+        </div>
+        <p class="final-message">${message}</p>
+        <button id="restart-quiz" class="restart-button">Reiniciar Quiz</button>
+      </div>
+    `;
+    
+    document.getElementById('restart-quiz').addEventListener('click', restartQuiz);
+    submitButton.style.display = 'none';
+    resultElement.textContent = '';
+    questionNumberElement.textContent = 'Resultados';
+  }
+
+  function restartQuiz() {
+    // Seleccionar nuevas preguntas aleatorias
+    selectRandomQuestions();
+    currentQuestionIndex = 0;
+    score = 0;
+    selectedAnswer = null;
+    submitButton.style.display = 'block';
+    submitButton.textContent = 'Responder';
+    submitButton.removeEventListener('click', nextQuestion);
+    submitButton.addEventListener('click', checkAnswer);
+    loadQuestion();
+  }
+
+  submitButton.addEventListener('click', checkAnswer);
+  loadQuestion();
+</script>
+
+<style>
+  .section-intro {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+
+  .quiz-container {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 15px 30px var(--shadow-color);
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .quiz-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  }
+
+  .quiz-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 15px;
+  }
+
+  .quiz-icon {
+    font-size: 2.5em;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .quiz-header h3 {
+    font-size: 1.8em;
+    margin: 0;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  .question-number {
+    font-size: 0.9em;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .question-text {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    line-height: 1.5;
+  }
+
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .option-button {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    color: var(--text-color);
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .option-button:hover {
+    background: #f1f3f5;
+    border-color: #dee2e6;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+
+  .option-button.selected {
+    background: rgba(255, 64, 129, 0.1);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    font-weight: 500;
+  }
+
+  .option-button.correct {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+    border-color: #4caf50;
+    font-weight: 500;
+  }
+
+  .option-button.wrong {
+    background: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+    border-color: #f44336;
+    font-weight: 500;
+  }
+
+  .option-button:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+
+  .quiz-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .quiz-progress {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    width: 0%;
+    transition: width 0.5s ease;
+  }
+
+  #submit-quiz {
+    background: linear-gradient(135deg, var(--primary-color), #7c4dff);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  #submit-quiz:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  #quiz-result {
+    margin-top: 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  .correct-answer {
+    color: #4caf50;
+    font-weight: 600;
+    font-size: 1.2em;
+  }
+
+  .wrong-answer {
+    color: #f44336;
+    font-weight: 600;
+    font-size: 1.2em;
+  }
+
+  .explanation {
+    display: block;
+    margin-top: 15px;
+    color: #666;
+    font-style: italic;
+    font-size: 0.9em;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+  }
+
+  .final-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .score-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .score-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  }
+
+  .score-number {
+    color: white;
+    font-size: 1.8em;
+    font-weight: 700;
+  }
+
+  .score-percentage {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+  }
+
+  .final-message {
+    font-size: 1.2em;
+    color: var(--text-color);
+    margin: 10px 0;
+  }
+
+  .restart-button {
+    background: linear-gradient(135deg, var(--secondary-color), #00bfa5);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .restart-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+  
+  /* Estilos para la sección de Historia del Surrealismo */
+  .timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px 0;
+  }
+  
+  .timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .timeline-item:nth-child(even) {
+    justify-content: flex-end;
+  }
+  
+  .timeline-date {
+    position: absolute;
+    top: 0;
+    width: 120px;
+    padding: 10px 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 1;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-date {
+    right: calc(50% + 30px);
+  }
+  
+  .timeline-item:nth-child(even) .timeline-date {
+    left: calc(50% + 30px);
+  }
+  
+  .timeline-content {
+    width: calc(50% - 50px);
+    padding: 25px;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    position: relative;
+    transition: all var(--transition-speed) ease;
+  }
+  
+  .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content::before {
+    right: -60px;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content::before {
+    left: -60px;
+  }
+  
+  .timeline-content h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+  
+  .timeline-content p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+  
+  .timeline-item:hover .timeline-content {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .timeline-container::before {
+      left: 30px;
+    }
+    
+    .timeline-item {
+      justify-content: flex-start;
+      margin-left: 70px;
+    }
+    
+    .timeline-item:nth-child(even) {
+      justify-content: flex-start;
+    }
+    
+    .timeline-date {
+      left: 0;
+      top: -40px;
+      width: 100px;
+      position: absolute;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-date {
+      right: auto;
+      left: 0;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-date {
+      left: 0;
+    }
+    
+    .timeline-content {
+      width: calc(100% - 40px);
+    }
+    
+    .timeline-content::before {
+      left: -50px;
+      right: auto;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content::before {
+      right: auto;
+      left: -50px;
+    }
+  }
+  
+  /* Estilos originales del quiz */
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  }
+  #submit-quiz:hover {
+    background: #333;
+    transform: translateY(-2px);
+  }
+  #quiz-result {
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+</style>
+
+<footer>
+Alex dev  <div class="footer-content">
+    <p>© 2025 El Universo Surrealista - Proyecto Escolar</p>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
